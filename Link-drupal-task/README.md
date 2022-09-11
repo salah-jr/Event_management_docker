@@ -18,6 +18,9 @@ database_port: 3306
 - Got to `src/app`.
 - Run `drush config-import -y` to enable the required modules and import all configuration that comes with them
 
+### Note
+- The route for the subtask "page for listing published events is: `/events/published`"
+
 <br>
 
 ### If you have a problem with configs, please find the attached database 'src/app/database/drupal.sql' in the root directory and import it.
@@ -25,3 +28,8 @@ database_port: 3306
 => Admin credentials in case of importing the database:-
 - username = salah
 - password = asd12345
+
+
+## Ports
+Nginx => 8080
+phpMyAdmin => 8081
