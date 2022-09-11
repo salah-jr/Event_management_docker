@@ -33,3 +33,13 @@ database_port: 3306
 ## Ports
 Nginx => 8080
 phpMyAdmin => 8081
+
+![Opera Snapshot_2022-09-12_013748_localhost](https://user-images.githubusercontent.com/26637798/189553924-76a3c603-6832-48d6-8e13-7ecb0667b7a8.png)
+![Opera Snapshot_2022-09-12_013936_localhost](https://user-images.githubusercontent.com/26637798/189553926-7a27855d-4ab8-4cab-9ded-8c2d8a6045ac.png)
+![Opera Snapshot_2022-09-12_013309_localhost](https://user-images.githubusercontent.com/26637798/189553927-e8bec178-c107-48e5-9993-3142f95ebbc1.png)
+![Opera Snapshot_2022-09-12_013353_localhost](https://user-images.githubusercontent.com/26637798/189553928-6f04a0e9-26a5-44d1-871d-c492a6046cae.png)
+![Opera Snapshot_2022-09-12_013419_localhost](https://user-images.githubusercontent.com/26637798/189553929-8cff1c02-10c0-4f29-8bf4-e266a8fdc814.png)
+![Opera Snapshot_2022-09-12_013447_localhost](https://user-images.githubusercontent.com/26637798/189553931-85ffb48e-b483-44a3-a94e-c8ef379b6437.png)
+![Opera Snapshot_2022-09-12_013549_localhost](https://user-images.githubusercontent.com/26637798/189553933-81707333-8d89-4adf-84a8-cb0591d6e920.png)
+![Opera Snapshot_2022-09-12_013656_localhost](https://user-images.githubusercontent.com/26637798/189553936-47a20eed-981e-430e-82bd-fb2791111806.png)
+
