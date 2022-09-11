@@ -1,0 +1,70 @@
+version: "3.9"
+
+networks:
+  drupal:
+
+services:
+  nginx:
+    image: library/nginx:stable-alpine
+    container_name: nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - "php"
+      - "mysql"
+    networks:
+      - drupal
+    volumes:
+    - ./src:/var/www/html
+    - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+
+  mysql:
+    image: mysql
+    container_name: mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: drupal
+      MYSQL_TCP_PORT: 3306
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./mysql:/var/lib/mysql/
+    networks:
+      - drupal
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      UPLOAD_LIMIT: 64M
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "8081:80"
+    volumes:
+      - /sessions
+    networks:
+      - drupal
+    links:
+      - mysql
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "9000:9000"
+    networks:
+      - drupal
